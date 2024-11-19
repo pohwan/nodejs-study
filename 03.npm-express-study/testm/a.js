@@ -1,0 +1,1 @@
+console.log('Via package.json load out a.js file')

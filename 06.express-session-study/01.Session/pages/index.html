@@ -1,0 +1,40 @@
+<!-- Not supporting -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backend Landing Page</title>
+    <script src="https://cdn.staticfile.net/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Homepage</h1>
+    <button id="btnLogout">Logout</button>
+    <script>
+      $(function () {
+        $("#btnLogout").on("click", function () {
+          $.ajax({
+            type: "POST",
+            url: "http://127.0.0.1/api/logout",
+            success: function (res) {
+              console.log(res);
+            },
+          });
+        });
+      });
+
+      function checkLoginStatus() {
+        // Check for the 'loggedIn' cookie (or use another cookie name depending on your implementation)
+        var loggedIn = getCookie("loggedIn");
+
+        if (!loggedIn) {
+          // If the user is not logged in, show a popup and redirect
+          alert("You need to log in to access this page.");
+          window.location.href = "login.html"; // Redirect to the login page
+        }
+      }
+      window.onload = checkLoginStatus;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "rinney-test-tools",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "Test to create own date format, HTML escape function",
+  "keywords": ["test", "dateFormat", "escape"],
+  "license": "ISC"
+}

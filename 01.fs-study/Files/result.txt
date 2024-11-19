@@ -1,0 +1,1 @@
+Ali=99 Abu=100 Ahmad=70 Ming=66 Lee=88
